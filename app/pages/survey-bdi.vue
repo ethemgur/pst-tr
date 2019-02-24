@@ -2,32 +2,48 @@
   <div data-page="cards" class="page kitchen-sink-material">
     <div class="navbar">
       <div class="navbar-inner">
-        <div class="center">BDI TESTİ</div>
+        <div class="center">BDI Testi</div>
       </div>
     </div>
     <a v-if="current === 0" class="floating-button color-purple" @click="navigateURL"><i class="material-icons">navigate_next</i></a>
     <div class="page-content" style="background-color: #f0d2f0; display: flex; align-items: center">
-      <div v-if="current !== 0" class="card" style="border-radius: 20px; width:90%; position: absolute; left: 2.5%">
-        <div class="card-header"><center>Son bir hafta içindeki (bugün dahil) kendi ruh durumunuzu göz önünde bulundurarak size en uygun olan ifadeyi bulunuz.</center></div>
+
+      <div v-if="current !== 0" class="card" style="border-radius: 20px; width:100%">
+        <div class="card-header" style="margin: 10px 0 10px 0">
+          <center>Son bir hafta içindeki (bugün dahil) kendi ruh durumunuzu göz önünde bulundurarak size en uygun olan ifadeyi bulunuz.</center>
+        </div>
         <div class="card-content">
           <div class="list-block">
             <ul>
               <span v-for="c in q.choices">
-                <br />
-                <li style="margin: 0 10px 0 10px"><a href="#" class="item-link" style="background-color:#9c27b0 ; color:white; border-radius: 50px" @click="select(c)"><p style="padding:2px; font-size:14px; text-align: center">{{c}}</p></a></li>
+                <li style="margin: 0 10px 0 10px">
+                  <div class="button button-raised button-fill color-purple my-button"
+                  @click="select(c)">{{c}}</div>
+                </li>
               </span>
-              <br />
             </ul>
           </div>
         </div>
       </div>
 
-      <div v-if="current === 0" class="card" style="border-radius: 20px; padding-top: 30px; padding-bottom: 30px; width:90%; position: absolute; left: 2.5%">
-        <div style="margin: 10px; text-align: center; font-size: 24px"> BDI testine başlamak için ilerle</div>
+      <div v-if="current === 0" class="card" style="border-radius: 20px; padding-top: 30px; padding-bottom: 30px; width:100%">
+        <div style="margin: 10px; text-align: center; font-size: 24px"> BDI testine başlamak için ilerleyin </div>
       </div>
     </div>
   </div>
 </template>
+<style>
+.my-button
+{
+  border-radius: 50px;
+  margin: 10px 0px;
+  text-transform: none;
+  padding: 10px;
+  height: auto;
+  white-space: normal;
+  line-height: 1.5;
+}
+</style>
 <script>
 export default {
   created() {
@@ -71,7 +87,7 @@ export default {
             'Kendimi üzgün hissetmiyorum',
             'Kendimi üzgün hissediyorum',
             'Her zaman için üzgünüm ve kendimi bu duygudan kurtaramıyorum',
-            'Öylesine üzgün ve mutsuzum ki dayanamıyorum',
+            'Öylesine üzgün ve\nmutsuzum ki dayanamıyorum',
           ],
         },
         {

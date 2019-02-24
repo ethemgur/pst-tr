@@ -2,27 +2,30 @@
   <div data-page="cards" class="page kitchen-sink-material">
     <div class="navbar">
       <div class="navbar-inner">
-        <div class="left">
-          <a class="link icon-only" href="/home/"><i class="icon icon-back"></i></a>
-        </div>
+        <div class="left"><a class="link icon-only" href="/home/"><i class="icon icon-back"></i></a></div>
         <div class="center">6. AŞAMA</div>
       </div>
     </div>
     <div class="page-content" style="background-color: #f0d2f0; display: flex; align-items: center">
       <div class="card" style="border-radius: 20px; width:100%">
-        <div class="card-header"><div style="text-align:center; width: 100%">Bu çözümü uygulamak kazançlı mı?</div></div>
+        <div class="card-header">
+          <div style="text-align:center; width: 100%">Bu çözümü uygulamak kazançlı mı?</div>
+        </div>
         <div class="card-content">
-          <div class="list-block" style="padding: 20px 10px">
+          <div class="list-block">
             <ul>
-              <li><a href="#" round="true "class="button button-raised button-fill color-purple" @click="select(true)" style="border-radius: 20px">Evet</a></li>
-            </br>
-            <li><a href="#" round="true "class="button button-raised button-fill color-purple" @click="select(false)" style="border-radius: 20px">Hayır</a></li>
-          </ul>
+              <li style="margin: 10px 10px">
+                <a href="#" class="button button-raised button-fill color-purple" @click="select(true)" style="border-radius: 20px">Evet</a>
+              </li>
+              <li style="margin: 10px 10px">
+                <a href="#" class="button button-raised button-fill color-purple" @click="select(false)" style="border-radius: 20px">Hayır</a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
 </template>
 <script>
 export default {
