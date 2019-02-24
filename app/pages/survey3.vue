@@ -3,7 +3,7 @@
     <div class="navbar">
       <div class="navbar-inner">
         <div class="left"><a class="link icon-only" href="/home/"><i class="icon icon-back"></i></a></div>
-        <div class="center">GENEL TEST</div>
+        <div class="center">Genel Test</div>
       </div>
     </div>
     <div class="page-content">
@@ -14,7 +14,7 @@
           <!-- SURVEY -->
 
           <div class="swiper-slide" style="background-color: #f0d2f0; display: flex; align-items: center">
-            <div class="card" style="border-radius:20px; padding-top: 10px; padding-bottom:10px">
+            <div class="card" style="border-radius:20px; width:100%; padding-top: 10px; padding-bottom:10px">
               <div class="card-header">
                 <div style="text-align: center; font-size: 18px"> Şimdi size verilen cümleler üzerinde düşünmenizi ve en uygun olan şıkkı işaretlemenizi isteyeceğiz</div>
               </div>
@@ -25,13 +25,17 @@
           </div>
 
           <div class="swiper-slide" v-for="q in questionsList.questions" style="background-color: #f0d2f0" >
-            <div class="card" style="border-radius:20px">
-              <div class="card-header"><center>{{q.text}}</center></div>
+            <div class="card" style="border-radius:20px; width:100%">
+              <div class="card-header "style="margin: 10px 0 10px 0"><center>{{q.text}}</center></div>
               <div class="card-content">
                 <div class="list-block">
                   <ul>
                     <span v-for="c in questionsList.choices">
-                      <li  style="margin: 10px; padding: 5px"><a href="#" round="true "class="button button-raised button-fill color-purple survey-next-button" @click="select(q.id,c)" style="border-radius: 20px"">{{c}}</a></li>
+                      <li style="margin: 10px">
+                        <a href="#" class="button button-raised button-fill color-purple survey-next-button"
+                        @click="select(q.id,c)" style="border-radius: 20px"">{{c}}
+                        </a>
+                      </li>
                     </span>
                   </ul>
                 </div>
@@ -41,20 +45,18 @@
 
           <!-- END OF SURVEY -->
 
-
-
-                  <div class="swiper-slide" style="background-color: #f0d2f0">
-                    <a class="floating-button color-purple" @click="navigateURL"><i class="material-icons">navigate_next</i></a>
-                      <div class="card" style="border-radius: 20px; position:absolute; top: 40%">
-                        <div class="card-header" style="text-align: center; font-size:20px"> Testi bitirmek için devam edin </div>
-                      </div>
-                  </div>
-
-                </div>
+            <div class="swiper-slide" style="background-color: #f0d2f0">
+            <a class="floating-button color-purple" @click="navigateURL"><i class="material-icons">navigate_next</i></a>
+            <div class="card" style="border-radius: 20px; padding-top: 30px; padding-bottom: 30px; width:100%">
+              <div class="card-header" style="text-align: center; font-size:20px"> Testi bitirmek için devam edin
               </div>
             </div>
           </div>
-        </template>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
 <script>
 module.exports = {
   data() {
