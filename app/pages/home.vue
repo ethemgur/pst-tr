@@ -1,60 +1,76 @@
 <template>
   <div data-page="home" class="page kitchen-sink-material">
+    <div class="navbar">
+      <div class="navbar-inner">
+        <div class="center">AŞAMALAR</div>
+      </div>
+    </div>
     <a href="/settings/" class="floating-button color-purple"><i class="material-icons">menu</i></a>
 
-    <div class="page-content" :style="{'background-image': 'url(' + require('../images/bg-home.jpg') + ')'}" style="background-size: cover">
-      <a v-if="isDone(1)" @click="navigateURL(1)">
-        <img id="y1" src="../images/circle1.png" width="50px" height="50px"/>
-      </a>
-      <a v-if="!isDone(1)" href="#">
-        <img id="y1" src="../images/circle1-grey.png" width="50px" height="50px"/>
-      </a>
+    <div class="page-content" style="background-color: #f0d2f0">
+      <div class="card" style="border-radius: 20px">
+        <div class="list-block" style="padding:10px">
+          <ul>
+            <li>
+              <a class="item-link item-content" @click="navigateURL(1)">
+                <div class="item-inner">
+                  <div class="item-title" :style="setColor(1)">1. AŞAMA</div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="item-link item-content" @click="navigateURL(2)">
+                <div class="item-inner">
+                  <div class="item-title" :style="setColor(2)">2. AŞAMA</div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="item-link item-content" @click="navigateURL(3)">
+                <div class="item-inner">
+                  <div class="item-title" :style="setColor(3)">3. AŞAMA</div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="item-link item-content" @click="navigateURL(4)">
+                <div class="item-inner">
+                  <div class="item-title" :style="setColor(4)">4. AŞAMA</div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="item-link item-content" @click="navigateURL(5)">
+                <div class="item-inner">
+                  <div class="item-title" :style="setColor(5)">5. AŞAMA</div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="item-link item-content" @click="navigateURL(6)">
+                <div class="item-inner">
+                  <div class="item-title" :style="setColor(6)">6. AŞAMA</div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="item-link item-content" @click="navigateURL(8)">
+                <div class="item-inner">
+                  <div class="item-title" :style="setColor(7)">7. AŞAMA</div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="item-link item-content" @click="finalAlert">
+                <div class="item-inner">
+                  <div class="item-title" :style="setColor(8)">BİTİRMEK İÇİN DOKUN</div>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
 
-      <a v-if="isDone(2)" @click="navigateURL(2)">
-        <img id="y2" src="../images/circle2.png" width="50px" height="50px"/>
-      </a>
-      <a v-if="!isDone(2)" href="#">
-        <img id="y2" src="../images/circle2-grey.png" width="50px" height="50px"/>
-      </a>
-
-      <a v-if="isDone(3)" @click="navigateURL(3)">
-        <img id="y3" src="../images/circle3.png" width="50px" height="50px"/>
-      </a>
-      <a v-if="!isDone(3)" href="#">
-        <img id="y3" src="../images/circle3-grey.png" width="50px" height="50px"/>
-      </a>
-
-      <a v-if="isDone(4)" @click="navigateURL(4)">
-        <img id="y4" src="../images/circle4.png" width="50px" height="50px"/>
-      </a>
-      <a v-if="!isDone(4)" href="#">
-        <img id="y4" src="../images/circle4-grey.png" width="50px" height="50px"/>
-      </a>
-
-      <a v-if="isDone(5)" @click="navigateURL(5)">
-        <img id="y5" src="../images/circle5.png" width="50px" height="50px"/>
-      </a>
-      <a v-if="!isDone(5)" href="#">
-        <img id="y5" src="../images/circle5-grey.png" width="50px" height="50px"/>
-      </a>
-
-      <a v-if="isDone(6)" @click="navigateURL(6)">
-        <img id="y6" src="../images/circle6.png" width="50px" height="50px"/>
-      </a>
-      <a v-if="!isDone(6)" href="#">
-        <img id="y6" src="../images/circle6-grey.png" width="50px" height="50px"/>
-      </a>
-
-      <a v-if="isDone(7)" @click="navigateURL(8)">
-        <img id="y7" src="../images/circle7.png" width="50px" height="50px"/>
-      </a>
-      <a v-if="!isDone(7)" href="#">
-        <img id="y7" src="../images/circle7-grey.png" width="50px" height="50px"/>
-      </a>
-
-      <a href="#" @click="finalAlert">
-        <img id="y8" src="../images/reward-purple.png" width="50px" height="50px"/>
-      </a>
     </div>
 
   </div>
@@ -73,14 +89,16 @@ export default {
       return false
     },
     navigateURL(i) {
-      if (i === 8 && this.$db('currentStep') === 8) {
-        this.$f7.alert('Bu aşamayı tamamladın.', '')
-      } else if (i === 8) {
-        this.$f7.views.main.loadPage('/video/8/')
-      } else if (i === this.$db('currentStep')) {
-        this.$f7.views.main.loadPage(`/video/${i}/`)
-      } else {
-        this.$f7.alert('Bu aşamayı tamamladın.', '')
+      if (this.isDone(i)) {
+        if (i === 8 && this.$db('currentStep') === 8) {
+          this.$f7.alert('Bu aşamayı tamamladın.', '')
+        } else if (i === 8) {
+          this.$f7.views.main.loadPage('/video/8/')
+        } else if (i === this.$db('currentStep')) {
+          this.$f7.views.main.loadPage(`/video/${i}/`)
+        } else {
+          this.$f7.alert('Bu aşamayı tamamladın.', '')
+        }
       }
     },
     finalAlert() {
@@ -89,6 +107,14 @@ export default {
       } else {
         this.$f7.alert('Önce tüm aşamaları tamamlamalısın.', '')
       }
+    },
+    setColor(i) {
+      if (i === this.$db('currentStep')) {
+        return 'color:green'
+      } else if (this.isDone(i)) {
+        return 'color:#9c27b0'
+      }
+      return 'color:grey'
     },
   },
 }
