@@ -1,0 +1,95 @@
+{
+  "title": "PS Therapy",
+  "defaultLanguage": "en",
+  "defaultLanguageFallback": false,
+  "theme": "material",
+  "color": "purple",
+  "layout": "default",
+  "statusbarVisibility": false,
+  "statusbarTextColor": "white",
+  "statusbarBackgroundColor": "#000000",
+  "iconBackgroundColor": "#ffffff",
+  "useIconFonts": {
+    "framework7": true,
+    "material": true,
+    "ion": false,
+    "fontawesome": true
+  },
+  "limitApplicationWidth": 320,
+  "limitApplicationHeight": 570,
+  "limitedSizeBodyBackgroundColor": "#333333",
+  "showPhoneFrameOnDesktop": true,
+  "phoneFrameBodyBackgroundColor": "#fafafa",
+  "framework7parameters": {},
+  "materialSubnavbarFix": true,
+  "restoreHistory": true,
+  "restoreComponentData": false,
+  "completeRoutesFile": true,
+  "firebase": {
+    "apiKey": "AIzaSyAKC1jHXmAI33sMZboLZso_e7n2KpNBBdo",
+    "authDomain": "pstherapy-2.firebaseapp.com",
+    "databaseURL": "https://pstherapy-2.firebaseio.com",
+    "storageBucket": "pstherapy-2.appspot.com",
+    "projectId": "pstherapy-2",
+    "allowEmailLogin": true,
+    "allowEmailRegistration": true
+  },
+  "devFirebase": {
+    "deployDevRulesOnTesting": false,
+    "apiKey": "AIzaSyAKC1jHXmAI33sMZboLZso_e7n2KpNBBdo",
+    "authDomain": "pstherapy-2.firebaseapp.com",
+    "databaseURL": "https://pstherapy-2.firebaseio.com",
+    "storageBucket": "pstherapy-2.appspot.com",
+    "projectId": "pstherapy-2",
+    "allowEmailLogin": true,
+    "allowEmailRegistration": true
+  },
+  "loginRequiredForAllPages": false,
+  "appStoreId": "com.aea.pstherapy",
+  "playStoreId": "com.aea.pstherapy",
+  "useCordovaPlugins": [],
+  "cordovaPreferences": {
+    "DisallowOverscroll": true,
+    "Orientation": "portrait"
+  },
+  "resetLocalStorageOnVersionChange": false,
+  "preloadImages": true,
+  "buildSourcemaps": false,
+  "editorConfig": {
+    "root": "true",
+    "[*]": null,
+    "indent_style": "space",
+    "indent_size": "2",
+    "charset": "utf-8",
+    "trim_trailing_whitespace": "true",
+    "insert_final_newline": "true",
+    "end_of_line": "lf",
+    "max_line_length": "null"
+  },
+  "eslint": {
+    "extends": "airbnb",
+    "rules": {
+      "max-len": 0,
+      "no-unused-vars": 0,
+      "no-plusplus": 0,
+      "no-param-reassign": 0,
+      "prefer-destructuring": 0,
+      "guard-for-in": 0,
+      "no-console": 0,
+      "no-underscore-dangle": 0,
+      "no-loop-func": 0,
+      "no-restricted-syntax": 0,
+      "no-prototype-builtins": 0,
+      "semi": [
+        "error",
+        "never"
+      ]
+    }
+  },
+  "fixCodeOnTest": true,
+  "fixCodeOnBuild": true,
+  "devServerPort": "8080",
+  "gitignore": {},
+  "npmignore": {},
+  "debug": false
+}

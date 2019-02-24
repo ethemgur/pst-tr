@@ -1,0 +1,222 @@
+[
+  {
+    "path": "/about/",
+    "component": "about.vue"
+  },
+  {
+    "path": "/home/",
+    "component": "home.vue"
+  },
+  {
+    "path": "/login/",
+    "component": "login.vue"
+  },
+  {
+    "path": "/settings/",
+    "component": "settings.vue"
+  },
+  {
+    "path": "/signup/",
+    "component": "signup.vue"
+  },
+  {
+    "path": "/step11/",
+    "component": "step11.vue"
+  },
+  {
+    "path": "/step12/",
+    "component": "step12.vue"
+  },
+  {
+    "path": "/step21/",
+    "component": "step21.vue"
+  },
+  {
+    "path": "/step211/",
+    "component": "step211.vue"
+  },
+  {
+    "path": "/step212/",
+    "component": "step212.vue"
+  },
+  {
+    "path": "/step22/",
+    "component": "step22.vue"
+  },
+  {
+    "path": "/step23/",
+    "component": "step23.vue"
+  },
+  {
+    "path": "/step23/:id/",
+    "component": "step23.vue"
+  },
+  {
+    "path": "/step24/",
+    "component": "step24.vue"
+  },
+  {
+    "path": "/step25/",
+    "component": "step25.vue"
+  },
+  {
+    "path": "/step25/:id/",
+    "component": "step25.vue"
+  },
+  {
+    "path": "/step26/",
+    "component": "step26.vue"
+  },
+  {
+    "path": "/step31/",
+    "component": "step31.vue"
+  },
+  {
+    "path": "/step311/",
+    "component": "step311.vue"
+  },
+  {
+    "path": "/step32/",
+    "component": "step32.vue"
+  },
+  {
+    "path": "/step33/",
+    "component": "step33.vue"
+  },
+  {
+    "path": "/step34/",
+    "component": "step34.vue"
+  },
+  {
+    "path": "/step41/",
+    "component": "step41.vue"
+  },
+  {
+    "path": "/step51/",
+    "component": "step51.vue"
+  },
+  {
+    "path": "/step52/",
+    "component": "step52.vue"
+  },
+  {
+    "path": "/step53/",
+    "component": "step53.vue"
+  },
+  {
+    "path": "/step53/:id/",
+    "component": "step53.vue"
+  },
+  {
+    "path": "/step54/",
+    "component": "step54.vue"
+  },
+  {
+    "path": "/step61/",
+    "component": "step61.vue"
+  },
+  {
+    "path": "/step611/",
+    "component": "step611.vue"
+  },
+  {
+    "path": "/step62/",
+    "component": "step62.vue"
+  },
+  {
+    "path": "/step63/",
+    "component": "step63.vue"
+  },
+  {
+    "path": "/step64/",
+    "component": "step64.vue"
+  },
+  {
+    "path": "/step65/",
+    "component": "step65.vue"
+  },
+  {
+    "path": "/step66/",
+    "component": "step66.vue"
+  },
+  {
+    "path": "/step67/",
+    "component": "step67.vue"
+  },
+  {
+    "path": "/step71/",
+    "component": "step71.vue"
+  },
+  {
+    "path": "/step711/",
+    "component": "step711.vue"
+  },
+  {
+    "path": "/step72/",
+    "component": "step72.vue"
+  },
+  {
+    "path": "/step8-video/",
+    "component": "step8-video.vue"
+  },
+  {
+    "path": "/step81/",
+    "component": "step81.vue"
+  },
+  {
+    "path": "/step82/",
+    "component": "step82.vue"
+  },
+  {
+    "path": "/step83/",
+    "component": "step83.vue"
+  },
+  {
+    "path": "/survey-bdi/",
+    "component": "survey-bdi.vue"
+  },
+  {
+    "path": "/survey-satisfaction/",
+    "component": "survey-satisfaction.vue"
+  },
+  {
+    "path": "/survey-selfesteem/",
+    "component": "survey-selfesteem.vue"
+  },
+  {
+    "path": "/survey-spsi/",
+    "component": "survey-spsi.vue"
+  },
+  {
+    "path": "/survey-stress/",
+    "component": "survey-stress.vue"
+  },
+  {
+    "path": "/survey/",
+    "component": "survey.vue"
+  },
+  {
+    "path": "/survey/:step/",
+    "component": "survey.vue"
+  },
+  {
+    "path": "/survey3-video/",
+    "component": "survey3-video.vue"
+  },
+  {
+    "path": "/survey3/",
+    "component": "survey3.vue"
+  },
+  {
+    "path": "/video/",
+    "component": "video.vue"
+  },
+  {
+    "path": "/video/:step/",
+    "component": "video.vue"
+  },
+  {
+    "path": "/welcome/",
+    "component": "welcome.vue"
+  }
+]

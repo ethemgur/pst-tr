@@ -1,0 +1,7 @@
+service firebase.storage {
+  match /b/pstherapy-2.appspot.com/o {
+    match /{allPaths=**} {
+      allow read, write;
+    }
+  }
+}
