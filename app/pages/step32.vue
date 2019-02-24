@@ -12,9 +12,8 @@
     <a href="/step33/" v-show="validation()" class="floating-button color-purple" @click="navigateURL"><i class="material-icons">navigate_next</i></a>
     <a href="#" v-show="!validation()" class="floating-button color-grey" @click="validationAlert()"><i class="material-icons">navigate_next</i></a>
 
-    <div class="page-content" style="background-color: #f0d2f0">
-      <div class="content">
-        <div class="card" style="border-radius: 20px;">
+    <div class="page-content" style="background-color: #f0d2f0; display: flex; align-items: center">
+        <div class="card" style="border-radius: 20px; width: 100%">
           <div class="card-header"> <div style="text-align:center; width: 100%"> {{card_header}} {{bestReason.text}} </div></div>
           <div class="card-content">
             <div class="list-block inputs-list" style= "padding-bottom: 15px">
@@ -45,23 +44,9 @@
             </div>
           </div>
         </div>
-      </div>
     </div>
   </div>
 </template>
-<style>
-.content{
-  position: absolute;
-  top: 50%;
-  width: 100%;
-  transform: translate(-50%, -50%)
-}
-.text{
-  text-align: center;
-  font-size: 24px;
-}
-</style>
-
 <script>
 export default {
   data() {

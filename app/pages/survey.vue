@@ -3,7 +3,7 @@
     <div class="navbar">
       <div class="navbar-inner">
         <div class="left"><a :href="'/video/' + stepp" class="link icon-only"><i class="icon icon-back"></i></a></div>
-        <div class="center">DUYGULARINIZ</div>
+        <div class="center">Duygularınız</div>
       </div>
     </div>
 
