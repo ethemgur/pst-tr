@@ -15,7 +15,8 @@
             <ul>
               <span v-for="c in choices">
                 <li style="margin: 0 10px 0 10px">
-                  <div class="button button-raised button-fill color-purple my-button"
+                  <div class="button button-raised button-fill color-purple"
+                  style="border-radius: 50px; margin: 10px 0px; text-transform: none; padding: 10px; height: auto; white-space: normal; line-height: 1.5"
                   @click="select(c)">{{c}}</div>
                 </li>
               </span>

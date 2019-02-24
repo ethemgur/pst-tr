@@ -14,8 +14,10 @@
             <ul>
               <span v-for="c in choices">
                 <li style="margin: 0 10px 0 10px">
-                  <div class="button button-raised button-fill color-purple my-button"
-                  @click="select(c)">{{c}}</div>
+                  <div class="button button-raised button-fill color-purple"
+                  style="border-radius: 50px; margin: 10px 0px; text-transform: none; padding: 10px; height: auto; white-space: normal; line-height: 1.5"
+                  @click="select(c)">
+                  {{c}}</div>
                 </li>
               </span>
             </ul>
@@ -30,18 +32,6 @@
     </div>
   </div>
 </template>
-<style>
-.my-button
-{
-  border-radius: 50px;
-  margin: 10px 0px;
-  text-transform: none;
-  padding: 10px;
-  height: auto;
-  white-space: normal;
-  line-height: 1.5;
-}
-</style>
 <script>
 /* İLK PARAM 0 GİRİŞ -> PARAM:1 1. SORU INDEX -1 */
 export default {
