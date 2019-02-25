@@ -11,6 +11,12 @@
       <video class="video-content" width="300" controls id="videoElement" @canplay="updatePaused" @playing="updatePaused" @pause="updatePaused" style="border-radius: 20px">
         <source :src="'file:///android_asset/www/output' +videoName()+ '.mp4'" type="video/mp4" />
       </video>
+      <center>
+        <div class="button button-raised button-fill color-purple"
+        style="border-radius: 50px; margin-top: 100%; width:90%; text-transform: none; padding: 10px; height: auto; white-space: normal; line-height: 1.5"
+        @click="goFullscreen()">Tam Ekran</div>
+      </center>
+
     </div>
   </div>
 </template>
@@ -32,6 +38,14 @@ export default {
     playing() { return !this.paused },
   },
   methods: {
+    goFullscreen() {
+      const element = document.getElementById('videoElement')
+      if (element.mozRequestFullScreen) {
+        element.mozRequestFullScreen()
+      } else if (element.webkitRequestFullScreen) {
+        element.webkitRequestFullScreen()
+      }
+    },
     onBackKeyDown() {
       this.pause()
       this.$f7.views.main.loadPage('/home/')

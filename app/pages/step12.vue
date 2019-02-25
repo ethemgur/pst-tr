@@ -11,6 +11,9 @@
       <video class="video-content" width="300" controls id="videoElement" @canplay="updatePaused" @playing="updatePaused" @pause="updatePaused" style="border-radius: 20px">
         <source src="file:///android_asset/www/output2.mp4" type="video/mp4" />
       </video>
+      <button onclick="goFullscreen('videoElement'); return false">
+        View Fullscreen!
+      </button>
     </div>
   </div>
 </template>
