@@ -8,12 +8,7 @@
     </div>
     <a class="floating-button color-purple" @click="navigateURL"><i class="material-icons">navigate_next</i></a>
     <div class="page-content" style="background-color: #f0d2f0">
-      <video class="video-content" width="300" controls id="videoElement" @canplay="updatePaused" @playing="updatePaused" @pause="updatePaused" style="border-radius: 20px">
-        <source src="file:///android_asset/www/output2.mp4" type="video/mp4" />
-      </video>
-      <button onclick="goFullscreen('videoElement'); return false">
-        View Fullscreen!
-      </button>
+      <iframe id="yvideo" class="video-content" :src="src" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
   </div>
 </template>
@@ -21,12 +16,14 @@
 export default {
   data() {
     return {
+      src: "",
       title: '1. AŞAMA',
       videoElement: null,
       paused: null,
     }
   },
   created() {
+    this.src = `https://www.youtube-nocookie.com/embed/${this.videoName()}`
     document.addEventListener('backbutton', this.onBackKeyDown, false)
   },
   computed: {
@@ -55,7 +52,7 @@ export default {
       this.videoElement.play()
     },
     pause() {
-      this.videoElement.pause()
+      this.src = ''
     },
   },
 }

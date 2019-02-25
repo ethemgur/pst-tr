@@ -8,14 +8,8 @@
     </div>
     <a :href="'/survey/' + step" class="floating-button color-purple" @click="pause"><i class="material-icons">navigate_next</i></a>
     <div class="page-content" style="background-color: #f0d2f0">
-      <video class="video-content" width="300" controls id="videoElement" @canplay="updatePaused" @playing="updatePaused" @pause="updatePaused" style="border-radius: 20px">
-        <source :src="'file:///android_asset/www/output' +videoName()+ '.mp4'" type="video/mp4" />
-      </video>
-      <center>
-        <div class="button button-raised button-fill color-purple"
-        style="border-radius: 50px; margin-top: 100%; width:90%; text-transform: none; padding: 10px; height: auto; white-space: normal; line-height: 1.5"
-        @click="goFullscreen()">Tam Ekran</div>
-      </center>
+
+      <iframe id="yvideo" class="video-content" :src="src" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
     </div>
   </div>
@@ -31,6 +25,7 @@ export default {
     }
   },
   created() {
+    this.src = `https://www.youtube-nocookie.com/embed/${this.videoName()}`
     this.step = this.$db('currentStep')
     document.addEventListener('backbutton', this.onBackKeyDown, false)
   },
@@ -38,13 +33,8 @@ export default {
     playing() { return !this.paused },
   },
   methods: {
-    goFullscreen() {
-      const element = document.getElementById('videoElement')
-      if (element.mozRequestFullScreen) {
-        element.mozRequestFullScreen()
-      } else if (element.webkitRequestFullScreen) {
-        element.webkitRequestFullScreen()
-      }
+    pause() {
+      this.src = ''
     },
     onBackKeyDown() {
       this.pause()
@@ -66,19 +56,19 @@ export default {
     },
     videoName() {
       if (this.$db('currentStep') === 1) {
-        return '1'
+        return 'UkPHa6Srd90'
       } else if (this.$db('currentStep') === 2) {
-        return '8'
+        return 'VJumP_QOWtk'
       } else if (this.$db('currentStep') === 3) {
-        return '11'
+        return 'efxl5XVWX_I'
       } else if (this.$db('currentStep') === 4) {
-        return '14'
+        return 'UZtI5Nm8fR4'
       } else if (this.$db('currentStep') === 5) {
-        return '15'
+        return 'gzhBpZuOJxM'
       } else if (this.$db('currentStep') === 6) {
-        return '18'
+        return '3tMEvDJ-nqk'
       }
-      return '24'
+      return '3HgnmrWwLIQ'
     },
   },
 }

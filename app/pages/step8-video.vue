@@ -43,10 +43,10 @@ export default {
       this.$f7.views.main.loadPage('/step83/')
     },
     videoName() {
-      if (this.$db('step81-ans') === 'Hayır') {
-        return '26'
+      if (this.$db('step81-ans') === 'Evet') {
+        return 'WY9FV-t03m8'
       }
-      return '25'
+      return '_Lxym74mWXE'
     },
     updatePaused(event) {
       this.videoElement = event.target
@@ -56,11 +56,7 @@ export default {
       this.videoElement.play()
     },
     pause() {
-      try {
-        this.videoElement.pause()
-      } catch (e) {
-        console.log(e)
-      }
+      this.src = ''
     },
   },
 }
