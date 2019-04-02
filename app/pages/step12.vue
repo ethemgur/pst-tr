@@ -16,7 +16,7 @@
 export default {
   data() {
     return {
-      src: "",
+      src: '',
       title: '1. AŞAMA',
       videoElement: null,
       paused: null,

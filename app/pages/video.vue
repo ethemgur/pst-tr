@@ -47,13 +47,6 @@ export default {
     play() {
       this.videoElement.play()
     },
-    pause() {
-      try {
-        this.videoElement.pause()
-      } catch (e) {
-        console.log(e)
-      }
-    },
     videoName() {
       if (this.$db('currentStep') === 1) {
         return 'UkPHa6Srd90'

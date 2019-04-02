@@ -54,7 +54,7 @@
               </a>
             </li>
             <li>
-              <a class="item-link item-content" @click="navigateURL(8)">
+              <a class="item-link item-content" @click="navigateURL(7)">
                 <div class="item-inner">
                   <div class="item-title" :style="setColor(7)">7. AŞAMA</div>
                 </div>
@@ -92,7 +92,7 @@ export default {
       if (this.isDone(i)) {
         if (i === 8 && this.$db('currentStep') === 8) {
           this.$f7.alert('Bu aşamayı tamamladın.', '')
-        } else if (i === 8) {
+        } else if (i === 7) {
           this.$f7.views.main.loadPage('/video/8/')
         } else if (i === this.$db('currentStep')) {
           this.$f7.views.main.loadPage(`/video/${i}/`)

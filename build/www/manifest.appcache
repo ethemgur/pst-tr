@@ -1,5 +1,5 @@
 CACHE MANIFEST
-#ver:v4.1.9
+#ver:v4.1.11
 #plugin:4.9.1
 
 CACHE:
@@ -17,10 +17,10 @@ CACHE:
 /fonts/fontawesome-webfont.af7ae50.woff2
 /fonts/fontawesome-webfont.fee66e7.woff
 /img/i-f7-material.ccc2c70.png
-/app.ccf9374.js
-/init.ccf9374.js
-/app.ccf9374.css
-/init.ccf9374.css
+/app.9722d2c.js
+/init.9722d2c.js
+/app.9722d2c.css
+/init.9722d2c.css
 /
 /offline-service-worker.js
 /manifest.json
